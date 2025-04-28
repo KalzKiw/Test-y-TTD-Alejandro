@@ -5,16 +5,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ReOrdenar {
     int [] numeros;
 
-    public void ordenarDesc(final int num) {
+    public static int ordenarDesc(final int num) {
         numeros = new int[]{num};
-         Arrays.sort(numeros);
-         System.out.println(numeros);
-        }
+        return Arrays.sort(numeros);
+    }
 
     }
 
-
-public class ReOrdenarTest { //la palabra test tiene que ir junto al nombre de la clase
+    class ReOrdenarTest { //la palabra test tiene que ir junto al nombre de la clase
 
     @Test
 
