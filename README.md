@@ -41,3 +41,4 @@ Investiga qué es el `assertEquals` y si hay más tipos de assert disponibles.
 ### d) Escribe el código para cumplir los tests diseñados
 
 Escribe el código que sea necesario para que cumpla con los tests diseñados en los apartados anteriores.
+#Alejandro <img alt="Cat Coding" src="https://i.pinimg.com/originals/80/7b/5c/807b5c4b02e765bb4930b7c66662ef4b.gif" align="right" width="200"/>
