@@ -1,5 +1,5 @@
 
-/* @Alejandro Brito Silva
+##@Alejandro Brito Silva
 
 Tu tarea consiste en crear una función que tome cualquier entero no negativo como argumento y lo devuelva con sus dígitos en orden descendente.
 Básicamente, reorganiza los dígitos para obtener el mayor número posible.
