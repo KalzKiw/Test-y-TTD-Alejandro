@@ -2,22 +2,19 @@ import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ReOrdenar {
-    int [] numeros;
+ class ReOrdenar {
 
     public static int ordenarDesc(final int num) {
-        numeros = new int[]{num};
-        return Arrays.sort(numeros);
-    }
+        String numeros = String.valueOf(num); //Pasamos el numero string
+        String[] unidad = numeros.split(""); //Separamos los numeros por unidades con ""
 
-    }
+        Arrays.sort(unidad);  //ahora podemos ordenar los numeros por unidades de menor a mayor
+        StringBuilder ordenado = new StringBuilder(); //Utilizamos StringBuilder para poder concatenar de nuevo todo
+        for(int i = unidad.length - 1 ; i >= 0; i--){ //Recorremos el array ordenando de mayor a menor
+            ordenado.append(unidad[i]); //Aquí lo concatenamos
+        }
+        return Integer.parseInt(ordenado.toString());  //Convertimos String de nuevo a un número
 
-    class ReOrdenarTest { //la palabra test tiene que ir junto al nombre de la clase
-
-    @Test
-
-    public void test_01() {
-        assertEquals(54421, ReOrdenar.ordenarDesc(42145)); //primero ponemos la salida esperada y luego el número que meteríamos por parámetros
     }
 }
 
@@ -50,6 +47,7 @@ a) Investiga lo que es el TDD, como aproximación básica vamos a escribir prime
  >> Hay muchos más pero la idea es que compruebe que se cumpla algo para pasar un test.
 
  c) He puesto unos ejemplos, hay algún valor límite que sea interesante comprobar?
+ *
  >>En el primero lo interesante sería que el 4 se repite y eso dependiendo de como se resuelva puede complicarlo.
  >>El caso de que ya esté ordenado pero de forma ascendente también es interesante. Y poner alguno con 0 también podría haber sido un buen caso.
  *
