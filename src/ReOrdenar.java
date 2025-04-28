@@ -1,15 +1,18 @@
 import org.junit.jupiter.api.Test;
+import java.util.Arrays;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ReOrdenar {
+    int [] numeros;
 
-    public static int ordenarDesc(final int num) {
-
-
+    public void ordenarDesc(final int num) {
+        numeros = new int[]{num};
+         Arrays.sort(numeros);
+         System.out.println(numeros);
+        }
 
     }
 
-}
 
 public class ReOrdenarTest { //la palabra test tiene que ir junto al nombre de la clase
 
@@ -18,6 +21,7 @@ public class ReOrdenarTest { //la palabra test tiene que ir junto al nombre de l
     public void test_01() {
         assertEquals(54421, ReOrdenar.ordenarDesc(42145)); //primero ponemos la salida esperada y luego el número que meteríamos por parámetros
     }
+}
 
 /* @Alejandro Brito Silva
  *
